@@ -14,7 +14,7 @@ class ConnectivitySocks {
 
   constructor() {
     xsenv.loadEnv()
-    this.#connectivityCredentials = xsenv.getServices({ connectivity: { name: 'wplconnectivity' } }).credential;
+    this.#connectivityCredentials = xsenv.getServices({ connectivity: { name: 'wplconnectivity' } }).connectivity;
     if (!this.#connectivityCredentials) {
       throw Error(
         'No connectivity credentials provided (local: not supported, SAP BTP: check binding)'
